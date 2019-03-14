@@ -1,0 +1,40 @@
+
+import java.io.*;
+import java.util.Scanner;
+
+public class plano {
+	public static void main(String[]args ) {
+		crear i=new crear();
+		i.ingreso();
+}}
+	class crear{
+		String opcion;char mensaje;int a;
+		Scanner sc = new Scanner (System.in);
+		public void ingreso() {
+			File f;
+			PrintWriter wr;
+	//		BrufferedReader rd;
+			try {
+				System.out.println("ingrese la ruta");
+				opcion=sc.next();
+				f = new File(opcion+"\\hola.txt");
+				wr = new PrintWriter (f);
+//				rd = new BufferedReader (f);
+				//System.out.println("ingrese el mensaje");
+				//mensaje=sc.next();
+				wr.append("Hola mundo");
+				wr.close();
+				//System.out.println("desea visualizar el archivo =1");
+			//	a=sc.nextInt();
+		//		if (a == 1 ) {
+					
+			//	}
+			}
+		
+		catch(Exception e) {
+			System.err.println("no se a podido crear el archivo "+e);
+		}
+		}
+		}
+		
+		
